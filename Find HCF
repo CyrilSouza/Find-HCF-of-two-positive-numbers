@@ -1,0 +1,26 @@
+/* Online Java Compiler and Editor */
+
+
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+import java.util.Scanner;
+public class Main{
+    public static int findhcf(int num1,int num2){
+        while(num2!=0){
+            int temp=num2;
+            num2=num1%num2;
+            num1=temp;
+        }
+        return num1;
+    }
+    public static void main(String[] args){
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter the two positive numbers");
+        int num1=sc.nextInt();
+        int num2=sc.nextInt();
+        
+        int hcf=findhcf(num1,num2);
+        System.out.println("The hcf of the two numbers provided is "+ hcf);
+        sc.close();
+    }
+}
